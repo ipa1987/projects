@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico">
+
+    <title>QR Code Generator</title>
+
+    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" media="screen,projection">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="heading orange lighten-5 red-text text-darken-4 center-align">QR code Generator</h1>
+    <main>
+    <div class="container container-front hoverable" id="qr-code-settings">
+        <div class="section" >
+            <div class="row">
+                <div class="col s12">
+                        <h3 class="teal-text text-darken-2">Adjust the settings below to suit your needs!</h3>
+                    <div class="setting">
+                        <label for="data">Text / URL</label><br>
+                        <input class="validate" type="text" name="data" id="data" min="0" max="900" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="colors">
+                    <div class="col s3 m3 offset-s1 offset-m1">
+                        <div class="setting">
+                            <label for="color">Main Color</label>
+                            <input id="color" type="color" value="#000000">
+                            <span id="color-value">#000000</span>
+                        </div>
+                    </div>
+                    <div class="col s4 m3 offset-s3 offset-m3">
+                        <div class="setting">
+                            <label for="bg-color">Background Color</label>
+                            <input id="bg-color" type="color" value="#c7c7c7">
+                            <span id="bg-color-value">#c7c7c7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="setting">
+                <label for="size">Size</label>
+                <span id="size-value" class="sub-label">200 x 200</span>
+                <p class="range-field">
+                    <input name="size" id="size" type="range" value="200" min="100" max="1000" step="100">
+                </p>
+            </div>
+            <div class="setting">
+                <label for="margin">Margin</label>
+                <span id="margin-value" class="sub-label">1 px</span>
+                <p class="range-field">
+                    <input type="range" name="margin" id="margin" min="0" max="50" value="1">
+                </p>
+            </div>
+
+
+            <div class="setting">
+    <h6>Image Format</h6>
+                    <label for="png">
+                      <input class="with-gap" name="format" id="png" value="png" type="radio" checked>
+                      <span>PNG</span>
+                    </label>
+                    <label for="gif">
+                      <input class="with-gap" name="format" id="gif" value="gif" type="radio">
+                      <span>GIF</span>
+                    </label>
+                    <label for="jpeg">
+                      <input class="with-gap" name="format" id="jpeg" value="jpeg" type="radio">
+                      <span>JPEG</span>
+                    </label>
+                    <label for="jpg">
+                      <input class="with-gap" name="format" id="jpg" value="jpg" type="radio">
+                      <span>JPG</span>
+                    </label>
+                    <label for="svg">
+                      <input class="with-gap" name="format" id="svg" value="svg" type="radio">
+                      <span>SVG</span>
+                    </label>
+        </div><br><br>
+
+            <div class="cta">
+                <button class="btn" id="cta" type="submit" disabled>Generate QR code&nbsp;&nbsp;<i class="fa-solid fa-qrcode"></i></button>
+            </div>
+
+        </div>
+        <!--Section 1-->
+    </div>
+    <!--container-->
+
+    <div class="container container-back" id="qr-code-result">
+        <div class="section" >
+            <header>
+                <h3>Your QR code is ready!</h3>
+            </header>
+            <div class="setting">
+                <img src="" alt="qr-code" id="qr-code-image" name="qr-code">
+            </div>
+
+            <div class="info">
+                <p>Right click on the image and select <b>"Save Image As"</b> to download the file
+                </p>
+
+                <p>Or need to make some changes?</p>
+
+                <div class="cta">
+                    <button class="btn btn-large" id="edit" type="submit"><i class="fa-solid fa-hand-point-left"></i>&nbsp;&nbsp;
+                        Go back</button>
+                </div>
+            </div>
+        </div>
+        <!--section 2-->
+    </div>
+    <!--container-->
+</main>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="./js/materialize.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+ body {
+    background-color: whitesmoke;
+    padding: 0 2rem;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    background-image: url('../images/qr-code1.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    display:block;
+    padding-bottom: 0.5rem;
+    text-decoration: underline;
+}
+
+.container {
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    min-width: 350px;
+    max-width: 500px;
+    width: 50%;
+    padding: 0 2rem;
+    min-height: 700px;
+
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+
+.container-front {
+background-color: whitesmoke ;
+border-radius: 1rem;
+padding: 0 2rem;
+
+-webkit-perspective: 150rem;
+perspective: 150rem;
+-moz-perspective: 150rem;
+position: relative;
+margin: 0 auto;
+}
+
+.container-front.flipped {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.container-back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.container-back.flipped {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+button:hover {
+    transition: all 0.15s ease-in-out;
+    transform: translateY(-0.2rem);
+}
+
+button:active {
+    transition: all 0.15s ease-in-out;
+}
+
+button:disabled {
+    outline: none;
+    transition: none;
+    transform: none;
+    cursor: not-allowed;
+}
+
+div .cta {
+    margin-left: 27%;
+    margin-right: 7%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    -webkit-perspective: 150rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    margin: 0 auto;
+}
+img {
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    margin-left: 8vw;
+    margin-right: auto;
+}
